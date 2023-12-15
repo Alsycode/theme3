@@ -1,6 +1,8 @@
 
 
-function Features3() {
+function Features3({serviceData}) {
+	console.log("*****",serviceData)
+	// const featureItem = serviceData?.data[0]?.attributes.feature;
     return (
       <>
         {/* <!-- Our Fetures --> */}
@@ -16,22 +18,23 @@ function Features3() {
 							<div className="col-lg-12 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
 								<div className="icon-bx-wraper left m-b50 icon-up">
 									<div className="icon-bx-sm radius gradient-sec shadow-primary m-b20"> 
-										<a href="#" className="icon-cell text-white"><i className="flaticon-idea"></i></a> 
+										<a href="#" className="icon-cell text-white"><i className={serviceData?.data[0]?.attributes.feature.feature[0].icon}></i></a> 
 									</div>
 									<div className="icon-content">
-										<h4 className="dlab-tilte text-capitalize">Idea & Analysis</h4>
-										<p>Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.</p>
+										<h4 className="dlab-tilte text-capitalize">{serviceData?.data[0]?.attributes.feature.feature[0].heading}</h4>
+										<p>{serviceData?.data[0]?.attributes.feature.feature[0].description}</p>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-12 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
 								<div className="icon-bx-wraper left m-b50 icon-up">
 									<div className="icon-bx-sm radius gradient-sec shadow-primary m-b20"> 
-										<a href="#" className="icon-cell text-white"><i className="flaticon-vector"></i></a> 
+										<a href="#" className="icon-cell text-white"><i className={serviceData?.data[0]?.attributes.feature.feature[1].icon}></i></a> 
 									</div>
 									<div className="icon-content">
-										<h4 className="dlab-tilte text-capitalize">Designing</h4>
-										<p>Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.</p>
+										<h4 className="dlab-tilte text-capitalize">{serviceData?.data[0]?.attributes.feature.feature[1].heading}</h4>
+										<p>{serviceData?.data[0]?.attributes.feature.feature[1].heading}
+										</p>
 									</div>
 								</div>
 							</div>
@@ -39,7 +42,7 @@ function Features3() {
 					</div>
 					<div className="col-lg-4 wow zoomIn" data-wow-duration="2s" data-wow-delay="0.2s">
 						<div className="dz-media text-center m-b30">
-							<img src="images/about/img7.png" className="move-1" alt=""/>
+							 <img src={serviceData?.data[0]?.attributes?.feature?.featureImage?.data?.attributes?.formats?.large?.url} className="move-1" alt=""/> 
 						</div>
 					</div>
 					<div className="col-lg-4">
@@ -47,22 +50,22 @@ function Features3() {
 							<div className="col-lg-12 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
 								<div className="icon-bx-wraper left m-b50 icon-up">
 									<div className="icon-bx-sm radius gradient-sec shadow-primary m-b20"> 
-										<a href="#" className="icon-cell text-white"><i className="flaticon-coding"></i></a> 
+										<a href="#" className="icon-cell text-white"><i className={serviceData?.data[0]?.attributes.feature.feature[2].icon}></i></a> 
 									</div>
 									<div className="icon-content">
-										<h4 className="dlab-tilte text-capitalize">Development</h4>
-										<p>Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.</p>
+										<h4 className="dlab-tilte text-capitalize">{serviceData?.data[0]?.attributes.feature.feature[2].heading}</h4>
+										<p>{serviceData?.data[0]?.attributes.feature.feature[2].description}</p>
 									</div>
 								</div>
 							</div>
 							<div className="col-lg-12 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
 								<div className="icon-bx-wraper left m-b50 icon-up">
 									<div className="icon-bx-sm radius gradient-sec shadow-primary m-b20"> 
-										<a href="#" className="icon-cell text-white"><i className="flaticon-rocket"></i></a> 
+										<a href="#" className="icon-cell text-white"><i className={serviceData?.data[0]?.attributes.feature.feature[3].icon}></i></a> 
 									</div>
 									<div className="icon-content">
-										<h4 className="dlab-tilte text-capitalize">Testing & Lunching</h4>
-										<p>Praesent tincidunt congue est ut hendrerit. Pellentesque et eros sit amet ipsum venenatis.</p>
+										<h4 className="dlab-tilte text-capitalize">{serviceData?.data[0]?.attributes.feature.feature[3].heading}</h4>
+										<p>{serviceData?.data[0]?.attributes.feature.feature[3].description}</p>
 									</div>
 								</div>
 							</div>
